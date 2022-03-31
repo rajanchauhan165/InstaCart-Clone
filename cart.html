@@ -28,6 +28,10 @@
         margin-top: 25px;
         
       }
+      #three{
+          display: flex;
+          justify-content: space-between;
+      }
       #three>div{
         display: flex;
         margin-left: 30px;
@@ -50,6 +54,15 @@
       }
       .farm{
         padding: 12px;
+        margin-left: 10px;
+      }
+      .farm h1 {
+          font-size: 20px;
+      }
+      .payAmt{
+          margin-right: 20px;
+          font-size: 20px;
+          font-weight: 600;
       }
       a{
         text-decoration: white;
@@ -70,7 +83,7 @@
       .blue{
         color: #00baf2;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 15px;
       }
       h1{
         font-family: Eina,Helvetica Neue,Helvetica,sans-serif;
@@ -183,13 +196,16 @@ button{
   </div>
   </div>
   <div id="three">
-      <div>
-        <img src="https://www.instacart.com/image-server/63x/d2lnr5mha7bycj.cloudfront.net/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png" alt="" srcset="">
-        <div class="farm">
-            <h1>Sprouts Farmers Market</h1>
-            <p1 class="blue">100% satisfaction guarantee</p1>
+        <div>
+            <img src="https://www.instacart.com/image-server/63x/d2lnr5mha7bycj.cloudfront.net/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png" alt="" srcset="">
+            <div class="farm">
+                <h1>Sprouts Farmers Market</h1>
+                <p class="blue">100% satisfaction guarantee</p>
+            </div>
+        </div> 
+        <div class="payAmt">
+            <span id="payAmt">00</span>
         </div>
-    </div> 
   </div>
     <div id="container"></div>
     <p class="total"></p>
@@ -200,13 +216,14 @@ button{
 </html>
 
 <script>
-  var cartData = JSON.parse(localStorage.getItem("cardItem")) || [];
+    var payAmt = document.querySelector('#payAmt');
+  var cartData = JSON.parse(localStorage.getItem("cartItem")) || [];
   console.log(cartData);
 
   var total = cartData.reduce(function (sum, elem, index, arr) {
     return sum + Number(elem.price);
   }, 0);
-
+  payAmt.innerText = `$ ${total.toFixed(2)}`;
   var length = cartData.length;
   console.log(length);
 
@@ -214,7 +231,7 @@ button{
   // total is Rs 16365
   //`` - template literals
   document.querySelector(
-    "p"
+    ".total"
   ).innerText = ` Total Items (${length}) Subtotal $ (${total.toFixed(2)})`;
 
   cartData.map(function (elem, index) {
