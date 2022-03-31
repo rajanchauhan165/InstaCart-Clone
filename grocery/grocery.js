@@ -365,5 +365,5 @@ function hvr(element, idx){
 }
 
 function goCart(){
-    window.location.href= '#'
+    window.location.href= 'cart.html';
 }
