@@ -215,7 +215,7 @@ button{
   //`` - template literals
   document.querySelector(
     "p"
-  ).innerText = ` Total Items (${length}) Subtotal Rs (${total})`;
+  ).innerText = ` Total Items (${length}) Subtotal $ (${total.toFixed(2)})`;
 
   cartData.map(function (elem, index) {
     var box = document.createElement("div");
