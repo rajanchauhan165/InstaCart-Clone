@@ -101,21 +101,21 @@ document.querySelector("#container").append(box);
 // redirecting to login page
 document.querySelector(".login").addEventListener("click",loginPage)
 function loginPage(){
-    window.location.href="login.html"
+    window.open("login.html","_blank")
 }
 // ends
 
 //redirecting to signup page
 document.querySelector(".signup").addEventListener("click",signupPage)
 function signupPage(){
-    window.location.href="signup.html"
+    window.open("login.signup.html","_blank")
 }
 //ends
 
 //redirecting to grocery page 
 document.querySelector(".startshopping").addEventListener("click",startShop)
 function startShop(){
-    window.location.href = "grocery.html";
+    window.open("grocery.html","_blank")
 }
 
 
