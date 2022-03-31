@@ -164,7 +164,7 @@ var dataFruit = [
     }
 ]
 
-var cartData = JSON.parse(localStorage.getItem('cardItem')) || [];
+var cartData = JSON.parse(localStorage.getItem('cartItem')) || [];
 
 
 var cardContainer = document.querySelector('.card-container');
@@ -360,7 +360,7 @@ function hvr(element, idx){
         loginBtn.style.backgroundColor = '#f6f7f8';
         loginBtn.style.color = '#343538';
     }
-    localStorage.setItem('cardItem', JSON.stringify(cartData));
+    localStorage.setItem('cartItem', JSON.stringify(cartData));
     console.log(cartData);
 }
 
