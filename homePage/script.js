@@ -108,7 +108,7 @@ function loginPage(){
 //redirecting to signup page
 document.querySelector(".signup").addEventListener("click",signupPage)
 function signupPage(){
-    window.open("login.signup.html","_blank")
+    window.open("signup.html","_blank")
 }
 //ends
 
