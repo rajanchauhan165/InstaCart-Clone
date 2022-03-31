@@ -28,13 +28,13 @@
         margin-top: 25px;
         
       }
-      #three{
-        border: 0.5px solid lightgray;
-        display: flex;
-        justify-content: center;
-      }
       #three>div{
+        display: flex;
         margin-left: 30px;
+        align-items: center;
+      }
+      #three img{
+          width: 15%;
       }
       #container>div{
          display: flex;
@@ -47,9 +47,6 @@
         /* border: 1px solid red; */
         width: 550px;
         
-      }
-      img{
-        padding: 12px;
       }
       .farm{
         padding: 12px;
@@ -186,10 +183,12 @@ button{
   </div>
   </div>
   <div id="three">
-    <img src="https://www.instacart.com/image-server/63x/d2lnr5mha7bycj.cloudfront.net/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png" alt="" srcset="">
-    <div class="farm">
-    <h1>Sprouts Farmers Market</h1>
-    <p1 class="blue">100% satisfaction guarantee</p1>
+      <div>
+        <img src="https://www.instacart.com/image-server/63x/d2lnr5mha7bycj.cloudfront.net/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png" alt="" srcset="">
+        <div class="farm">
+            <h1>Sprouts Farmers Market</h1>
+            <p1 class="blue">100% satisfaction guarantee</p1>
+        </div>
     </div> 
   </div>
     <div id="container"></div>
@@ -201,7 +200,7 @@ button{
 </html>
 
 <script>
-  var cartData = JSON.parse(localStorage.getItem("cart"));
+  var cartData = JSON.parse(localStorage.getItem("cardItem")) || [];
   console.log(cartData);
 
   var total = cartData.reduce(function (sum, elem, index, arr) {
@@ -220,10 +219,8 @@ button{
 
   cartData.map(function (elem, index) {
     var box = document.createElement("div");
-    
-
     var img = document.createElement("img");
-    img.src = elem.image_url;
+    img.src = elem.image;
     
     var box2 =document.createElement("div");
      box2.setAttribute("class","innerdiv");
@@ -255,7 +252,7 @@ button{
     console.log(elem, index);
     cartData.splice(index, 1);
     console.log(cartData);
-    localStorage.setItem("cart", JSON.stringify(cartData));
+    localStorage.setItem("cartItem", JSON.stringify(cartData));
     window.location.reload();
   }
 
