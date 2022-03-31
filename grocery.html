@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="grocery/grocery.css" />
+    <link rel="stylesheet" href="grocery/navbar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Sprouts Farmers Markets Delicery</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar_left">
+            <div class="menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <div class="navLogo"><img src="https://www.instacart.com/image-server/240x48/www.instacart.com/assets/beetstrap/brand/2022/instacart-logo-color@3x-6b71df83cfba8c6827f59bff009df3be6e96d484ebdc5da7e6122e9555eae9b6.png" alt=""></div>
+            <div class="allStore">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#72767E" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" size="12" color="systemGrayscale50"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.121 12l5.94-5.94a1.5 1.5 0 00-2.122-2.12l-7 7a1.5 1.5 0 000 2.12l7 7a1.5 1.5 0 002.122-2.12L7.12 12z"></path></svg>
+                <span>All stores</span>
+
+                </div>
+        </div>
+        <div class="searchBar">
+            <!-- <input type="text"> -->
+        </div>
+        <div class="navbar_right">
+            <div class="deliveryBtn">
+                Delivery
+                <div>Pickup</div>
+            </div>
+            <div class="pickup">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg" size="24" class="css-1an9ecb-AddressButton"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm-2.899 3h.378a1.494 1.494 0 01.87.263l4.483 2.989a1.5 1.5 0 01-1.664 2.496L13.5 12.303v1.314l2.817 5.165a1.5 1.5 0 01-2.634 1.436l-2.158-3.956-.026-.047-.999-1.832v-.023l-.774-1.437a3 3 0 01-.352-1.625l.023-.208A2.005 2.005 0 008 13l-.007.145A1.5 1.5 0 015 13.001a5.004 5.004 0 015.004-5.004H11.5c.034 0 .068 0 .101.003zm-.875 10.463c-.276.622-.59 1.224-.94 1.809a1.5 1.5 0 11-2.572-1.544 13.818 13.818 0 001.57-3.825l1.942 3.56z"></path></svg>
+                Pickup at 3035 Broadway
+            </div>
+            <div class="readyBy8">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale70" class="css-1uiiq64-ServiceEta"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 12a9.5 9.5 0 11-19 0 9.5 9.5 0 0119 0zM12 5.5A1.5 1.5 0 0113.5 7v4.379l3.06 3.06a1.5 1.5 0 11-2.12 2.122l-3.5-3.5A1.5 1.5 0 0110.5 12V7A1.5 1.5 0 0112 5.5z"></path></svg>
+                Ready by 8:00pm
+            </div>
+            <button id="loginBtn">Log in</button>
+            <div class="cart">
+                <svg id="cartSvg" width="24" height="24" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale70"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.923 4.526L8.5 6H19a1.5 1.5 0 011.455 1.864l-1.5 6A1.5 1.5 0 0117.5 15h-8a1.5 1.5 0 01-1.398-.956L5 6.5a1.5 1.5 0 110-3h1.5a1.5 1.5 0 011.423 1.026zM10 20.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm7 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+                <span id="cart_item_count">0</span>    
+            </div>
+        </div>
+        
+    </div>
+    <div id="container">
+        <div id="left">
+            <div class="logoContainer">
+                <div class="comLogo">
+                    <img src="https://www.instacart.com/image-server/88x88/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png"
+                        alt="" />
+                    <h2 class="">Sprouts Farmers Market</h2>
+                </div>
+                <div class="textLeft">
+                    <a href="">Everyday store prices</a>
+                    <div>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg"
+                        size="16" class="css-1emnyvb">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.553 1.88a2 2 0 00-3.111 0l-.408.504a2 2 0 01-2.075.674l-.626-.168a2 2 0 00-2.517 1.828l-.033.648A2 2 0 013.501 7.13l-.606.232a2 2 0 00-.961 2.958l.353.544a2 2 0 010 2.181l-.353.544a2 2 0 00.961 2.958l.606.232a2 2 0 011.282 1.765l.033.648a2 2 0 002.517 1.828l.626-.168a2 2 0 012.075.674l.408.504a2 2 0 003.11 0l.408-.504a2 2 0 012.075-.674l.626.168a2 2 0 002.517-1.828l.033-.648a2 2 0 011.283-1.765l.605-.232a2 2 0 00.962-2.958l-.354-.544a2 2 0 010-2.181l.354-.544a2 2 0 00-.962-2.958l-.605-.232a2 2 0 01-1.283-1.765l-.033-.648A2 2 0 0016.66 2.89l-.626.168a2 2 0 01-2.075-.674l-.408-.504zm-7.367 9.266a1.5 1.5 0 012.121-.001l1.943 1.94 5.436-5.44a1.5 1.5 0 112.122 2.121l-6.497 6.5a1.5 1.5 0 01-2.12 0l-3.004-3a1.5 1.5 0 010-2.12z">
+                        </path>
+                        </svg>
+                        <p>100% satisfaction guarantee</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+                <div class="first_btns"><svg width="24" height="24" viewBox="0 0 24 24" fill="#343538"
+                        xmlns="http://www.w3.org/2000/svg" size="24" class="css-1nuqj94-MenuLink">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.557 8.393a1.5 1.5 0 01-1.114 0L9.5 7.616l-1.936.776a1.5 1.5 0 01-.558.108H5a1.5 1.5 0 01-1.342-2.17l1-2A1.5 1.5 0 016 3.5h12a1.5 1.5 0 011.342.83l1 2A1.5 1.5 0 0119 8.5h-2.002a1.5 1.5 0 01-.558-.108l-1.94-.776-1.943.777zm-8.895 2.926c-.164.32-.164.74-.164 1.581v5.2c0 .84 0 1.26.164 1.581a1.5 1.5 0 00.655.655c.32.164.741.164 1.581.164H7.6c.84 0 1.26 0 1.581-.163a1.5 1.5 0 00.655-.656c.164-.32.164-.74.164-1.581v-.5c0-.56 0-.84.109-1.054a1 1 0 01.437-.437C10.76 16 11.04 16 11.6 16h.8c.56 0 .84 0 1.054.109a1 1 0 01.437.437C14 16.76 14 17.04 14 17.6v.5c0 .84 0 1.26.164 1.581a1.5 1.5 0 00.655.655c.32.164.74.164 1.581.164h1.698c.84 0 1.26 0 1.581-.163a1.5 1.5 0 00.656-.656c.163-.32.163-.74.163-1.581v-5.2c0-.84 0-1.26-.163-1.581a1.5 1.5 0 00-.656-.655c-.32-.164-.74-.164-1.581-.164h-12.2c-.84 0-1.26 0-1.58.164a1.5 1.5 0 00-.656.655z">
+                        </path>
+                    </svg>
+                    Shop</div>
+                <div class="last_btns">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg"
+                        size="24" class="css-1qumf7v-MenuLink">
+                        <path
+                            d="M4.287 2.5H6v19H4.287c-.158 0-.287-.208-.287-.462V2.962c0-.254.129-.462.287-.462zM11.5 2.5h-4v19h8.95c1.958 0 3.55-1.45 3.55-3.234V5.734c0-1.768-1.566-3.21-3.5-3.234v6.793a.408.408 0 01-.233.37.397.397 0 01-.414-.034l-1.715-1.233a.233.233 0 00-.276 0L12.147 9.63a.394.394 0 01-.423.035.402.402 0 01-.224-.363V2.5z">
+                        </path>
+                    </svg>
+                    Pecipes
+                </div>
+            </div>
+            <div class="list_of_category">
+                <ul aria-labelledby="sm-departments" class="css-1eag065-StoreMenu">
+                    <li><span>Produce</span></li>
+                    <li><span>Grocery Aisles</span></li>
+                    <li><span>Dairy &amp; Eggs</span></li>
+                    <li><span>Deli</span></li>
+                    <li><span>Frozen Foods</span></li>
+                    <li><span>Snacks</span></li>
+                    <li><span>Meat &amp; Seafood</span></li>
+                    <li><span>Bakery</span></li>
+                    <li><span>Beverages</span></li>
+                    <li><span>Bulk</span></li>
+                    <li><span>Vitamins &amp; Supplements</span></li>
+                    <li><span>Household</span></li>
+                    <li><span>Bath &amp; Body Care</span></li>
+                    <li><span>Baby</span></li>
+                    <li><span>Beer &amp; Wine</span></li>
+                    <li><span>Pets</span></li>
+                    <li><span>Prepared Foods</span></li>
+                    <li><span>Sprouts Brands</span></li>
+                    <li><span>Gifts</span></li>
+                    <li><span>Sales</span></li>
+                </ul>
+            </div>
+        </div>
+        <div id="right">
+            <div id="banner">
+                <div class="banner-left">
+                    <h2 class="bannerH2">Shop your favorite drinks too</h2>
+                    <div>
+                        <h3 class="bannerH3">
+                            Whatever the occasion, we've got you covered.
+                        </h3>
+                        <button class="bannerBtn">Browse drinks</button>
+                    </div>
+                </div>
+                <div class="banner-right">
+                    <img src="https://www.instacart.com/assets/storefront/banners/alcohol_v4_banner/alcohol-banner-desktop@3x-da6ed5d5215eee7fae430e97056daa08c30cfd3d92254c4821144f412c6fe720.png"
+                        alt="" />
+                </div>
+            </div>
+
+            <!-- section one -->
+
+            <div class="sec-head">
+                <div>
+                    <h1>Fresh Vegetables</h1>
+                </div>
+                <div class="sec-head-inner">
+                    <div class="viewMore">
+                        <a href="">View more <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div>
+                        <div id="btnLeft" class="viewBtn btnLeft">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </div>
+                        <div id="btnRight" class="viewBtn btnRight">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container"></div>
+
+            <!-- section two -->
+            <div class="sec-head">
+                <div>
+                    <h1>Fresh Fruit</h1>
+                </div>
+                <div class="sec-head-inner">
+                    <div class="viewMore">
+                        <a href="">View more <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div>
+                        <div id="btnLeft1" class="viewBtn btnLeft">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </div>
+                        <div id="btnRight1" class="viewBtn btnRight">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container1"></div>
+        </div>
+    </div>
+    <script src="grocery/grocery.js"></script>
+</body>
+
+</html>

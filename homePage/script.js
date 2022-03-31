@@ -115,7 +115,7 @@ function signupPage(){
 //redirecting to grocery page 
 document.querySelector(".startshopping").addEventListener("click",startShop)
 function startShop(){
-    window.location.href = "groceryPage"
+    window.location.href = "grocery.html";
 }
 
 
