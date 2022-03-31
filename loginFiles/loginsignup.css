@@ -7,7 +7,7 @@ body{
     margin: auto;
     width: 100%;
     height: 950px;
-    background-image: url("/InstaCart-Clone/loginFiles/bg2.jpg");
+    background-image: url("loginFiles/bg2.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
