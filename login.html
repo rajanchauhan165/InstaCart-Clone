@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a53f968ed6.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="loginsignup.css">
+    <title>Instacart - Login</title>
+</head>
+<body>
+    <div id="background">
+        <div class="main">
+            <a style="color: black;" href="homepage.html"><i class="fa-solid fa-xmark"></i></a>
+            <h1>Log in</h1>
+            <input id="loginemail" type="email" placeholder="Email"> <br>
+            <input id="loginpassword" type="password" placeholder="Password">
+            <p>Forgot password? <span>Reset it</span></p>
+            <button id="correctuser">Log in</button>
+            <p id="alert">...</p>
+
+            <hr>
+
+            <div class="socialmain">
+                <div class="logo"><img src="phone.png"></div>
+                <div class="para"><p>Continue with Phone</p></div>
+            </div>
+            <div class="socialmain">
+                <div class="logo"><img src="fb.png"></div>
+                <div class="para"><p>Continue with Facebook</p></div>
+            </div>
+            <div class="socialmain">
+                <div class="logo"><img src="google.png"></div>
+                <div class="para"><p>Continue with Google</p></div>
+            </div>
+
+
+            <hr>
+            <p class="center">Don't have an account?</p>
+            <p class="center"><a href="signup.html">Sign up</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+
+    document.querySelector("button").addEventListener("click", mylogin)
+    var regusers = JSON.parse(localStorage.getItem("regdata")) || []
+
+    function mylogin(){
+        var email = document.querySelector("#loginemail").value
+        var password = document.querySelector("#loginpassword").value
+
+        for(var i=0; i<regusers.length; i++){
+            if(regusers[i].regemail == email && regusers[i].regpass == password){
+                var alt = document.getElementById("alert")
+                alt.innerText = "Login Success"
+                alt.style.color = "green"
+                document.getElementById("correctuser").innerText = "Redirecting..."
+                window.location.href = "homepage.html"
+                break;
+            }else{
+                var alt = document.getElementById("alert")
+                alt.innerText = "Login failed: Wrong credentials."
+                alt.style.color = "red"
+                document.querySelector("#loginemail").value = ""
+                document.querySelector("#loginpassword").value = ""
+            }
+        }
+    }
+</script>
