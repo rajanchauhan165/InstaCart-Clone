@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #cartbox{
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        width: 700px;
+        justify-content: center;
+       margin: auto;
+      }
+      #one{
+        /* border: 1px solid lightslategray; */
+        text-align: center;
+        line-height: 20px;
+      }
+      #two{
+        display: flex;
+        border:0.5px solid lightgray;
+        justify-content: space-between;
+        padding: 20px 10px 20px 10px;
+      }
+      #two>div{
+        margin-top: 25px;
+        
+      }
+      #three{
+        border: 0.5px solid lightgray;
+        display: flex;
+        justify-content: center;
+      }
+      #three>div{
+        margin-left: 30px;
+      }
+      #container>div{
+         display: flex;
+         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+         height: 100px;
+          }
+      .innerdiv{
+        display: flex;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+        width: 550px;
+        
+      }
+      img{
+        padding: 12px;
+      }
+      .farm{
+        padding: 12px;
+      }
+      a{
+        text-decoration: white;
+       }
+      .final {
+       color: aliceblue;
+       background-color: green;
+       width: 700px;
+       height: 40px;
+       border-radius: 10px;
+       padding: 10px;
+      }
+      .final a{
+        color: white;
+        font-size: 20px;
+
+      }
+      .blue{
+        color: #00baf2;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      h1{
+        font-family: Eina,Helvetica Neue,Helvetica,sans-serif;
+      }
+      .total{
+        color: rgb(255, 35, 35);
+        font-size: 20px;
+        text-align: center;
+        font-weight: bolder;
+      }
+      .pname{
+        font-size: 15px;
+        margin-left: 50px;
+        margin-top: 30px;
+        
+      }
+      .inndiv{
+        margin-top: 7px;
+        /* border: 1px solid blue; */
+       justify-items: end;
+      }
+      
+     
+      .switch {
+       position: relative;
+       display: inline-block;
+       width: 60px;
+       height: 34px;
+  
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+button{
+  color: white;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+}
+
+
+      
+    </style>
+  </head>
+  <body>
+    <div id="cartbox">
+    <div id="one">
+      <h1>Personal Sprouts Farmers Market</h1>
+      <p1>Shopping in Instacart</p1>
+    </div>
+    <div id="two">
+    <h1>Make This Order a gift</h1>
+    <div>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  </div>
+  <div id="three">
+    <img src="https://www.instacart.com/image-server/63x/d2lnr5mha7bycj.cloudfront.net/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png" alt="" srcset="">
+    <div class="farm">
+    <h1>Sprouts Farmers Market</h1>
+    <p1 class="blue">100% satisfaction guarantee</p1>
+    </div> 
+  </div>
+    <div id="container"></div>
+    <p class="total"></p>
+    <button class="final"><a href="checkout.html" target="blank">Go to Checkout</a></button>
+  </div>
+  
+  </body>
+</html>
+
+<script>
+  var cartData = JSON.parse(localStorage.getItem("cart"));
+  console.log(cartData);
+
+  var total = cartData.reduce(function (sum, elem, index, arr) {
+    return sum + Number(elem.price);
+  }, 0);
+
+  var length = cartData.length;
+  console.log(length);
+
+  console.log(total);
+  // total is Rs 16365
+  //`` - template literals
+  document.querySelector(
+    "p"
+  ).innerText = ` Total Items (${length}) Subtotal Rs (${total})`;
+
+  cartData.map(function (elem, index) {
+    var box = document.createElement("div");
+    
+
+    var img = document.createElement("img");
+    img.src = elem.image_url;
+    
+    var box2 =document.createElement("div");
+     box2.setAttribute("class","innerdiv");
+
+    var name = document.createElement("p");
+    name.textContent = elem.name;
+    name.setAttribute("class","pname")
+
+    var box3 =document.createElement("div");
+     box3.setAttribute("class","inndiv");
+
+    var price = document.createElement("p");
+    price.innerText = elem.price;
+    
+    var btn = document.createElement("button");
+    btn.innerText = "Remove";
+    btn.addEventListener("click", function () {
+      removeItem(elem, index);
+    });
+
+    box.append(img,box2);
+    box2.append(name,box3);
+    box3.append(price,btn);
+
+    document.querySelector("#container").append(box);
+  });
+
+  function removeItem(elem, index) {
+    console.log(elem, index);
+    cartData.splice(index, 1);
+    console.log(cartData);
+    localStorage.setItem("cart", JSON.stringify(cartData));
+    window.location.reload();
+  }
+
+  //    var arr =[1,2,3,4]
+  //    console.log(arr.splice(0,1)) // []
+</script>
