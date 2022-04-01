@@ -109,7 +109,7 @@ var dataFruit = [
     {
         image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_839d7037-01ed-402b-b995-3ee037c94485.png',
         price: 0.36,
-        priceTx: 'each(est.',
+        priceTx: 'each(est.)',
         type: 'Organic',
         name: 'Organic Banana',
         qty: '$0.89/lb'
@@ -125,7 +125,7 @@ var dataFruit = [
     {
         image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_839d7037-01ed-402b-b995-3ee037c94485.png',
         price: 0.36,
-        priceTx: 'each(est.',
+        priceTx: 'each(est.)',
         type: '',
         name: 'Banana',
         qty: '$0.79/lb'
@@ -147,20 +147,100 @@ var dataFruit = [
         qty: '1 lb container'
     },
     {
-        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_29c3f797-a0cc-4241-a43b-141a1f0dcbf7.png',
-        price: 2.98,
-        priceTx: 'reg. $3.99',
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_371621b0-9d1a-471c-b3cc-66f8293d80d7.png',
+        price: 0.50,
+        priceTx: '',
         type: '',
-        name: 'Strawberries',
-        qty: '1 lb container'
+        name: 'Lemon',
+        qty: ''
     },
     {
-        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_29c3f797-a0cc-4241-a43b-141a1f0dcbf7.png',
-        price: 2.98,
-        priceTx: 'reg. $3.99',
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7b163074-0594-4c39-8da8-f5df568a649a.png',
+        price: 0.50,
+        priceTx: '',
         type: '',
-        name: 'Strawberries',
-        qty: '1 lb container'
+        name: 'Lime',
+        qty: ''
+    },
+    {
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0781abc9-60f1-4073-afd5-720ee6504518.png',
+        price: 3.50,
+        priceTx: 'reg.$4.49',
+        type: 'Organic',
+        name: 'Organic Blackberries',
+        qty: '6 oz container'
+    },
+    {
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0781abc9-60f1-4073-afd5-720ee6504518.png',
+        price: 2.50,
+        priceTx: 'reg.$3.49',
+        type: '',
+        name: 'Blackberries',
+        qty: '5.6 oz container'
+    },
+    {
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_66c22fdf-0e92-48de-b3d4-06c14455e630.png',
+        price: 3.49,
+        priceTx: '',
+        type: '($0.11/oz)',
+        name: 'Mandarins Bag',
+        qty: '2 lb'
+    },
+    {
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_954a15b8-0a19-4f8f-8bf3-1dd815bf25eb.png',
+        price: 2.50,
+        priceTx: 'reg.$3.49',
+        type: '($0.42/oz)',
+        name: 'Blueberries',
+        qty: '6 oz'
+    },
+    {
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_53d71af3-4702-4fa4-80e2-27676543643f.png',
+        price: 5.99,
+        priceTx: '',
+        type: 'Organic',
+        name: 'Organic Raspberries',
+        qty: '6 oz container'
+    },
+    {
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_be23e5f5-c95e-4fbc-8afc-23ab0cd8881a.png',
+        price: 4.34,
+        priceTx: 'reg.$6.55',
+        type: '',
+        name: 'Red Seedless Grapes',
+        qty: '$1.98/ lb'
+    },
+    {
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_66831aa1-1aba-4689-b1be-11c070e81f7b.png',
+        price: 2.50,
+        priceTx: 'reg.$3.50',
+        type: '',
+        name: 'Contaloupe',
+        qty: '1 ct'
+    },
+    {
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_ff38ed1c-e753-4aa3-b614-a4cddada2fec.png',
+        price: 1.12,
+        priceTx: 'each (est.)',
+        type: '',
+        name: 'Honeycrisp Apple',
+        qty: '$2.79/lb'
+    },
+    {
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_41d5b222-99de-4105-9a97-7a181dd1a824.png',
+        price: 1.25,
+        priceTx: 'reg.$1.50',
+        type: '',
+        name: 'Red Mango',
+        qty: '1 ct'
+    },
+    {
+        image: 'https://www.instacart.com/image-server/197x197/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_c67a59b5-7609-4c54-8411-0a8790174cac.png',
+        price: 2.00,
+        priceTx: 'reg.$2.99',
+        type: 'Organic',
+        name: 'Organic Large Hass',
+        qty: '1 each'
     }
 ]
 
@@ -173,7 +253,11 @@ var cartItemCount = document.querySelector('#cart_item_count');
 var loginBtn = document.querySelector('#loginBtn');
 var cart = document.querySelector('.cart');
 cart.addEventListener('click', goCart);
-cartItemCount.innerText = cartData.length;
+var total = cartData.reduce((total, elem) => {
+    return total+elem.count;
+},0)
+console.log(cartData);
+cartItemCount.innerText = total;
 if(cartItemCount.innerText != '0'){
     cart.style.backgroundColor = 'rgb(10, 173, 10)';
     cart.style.color = 'white';
@@ -278,13 +362,25 @@ dataVegetables.map((element, index) => {
     price.textContent = `$ ${element.price}`
     price.className = 'price';
     priceDiv.append(price);
+    var spn = document.createElement('span');
+    spn.innerText = element.priceTx;
+    spn.style.fontSize = '13px';
+    spn.style.marginLeft = '5px'
+    priceDiv.append(spn);
     var nameDiv = document.createElement('div');
     nameDiv.innerText = element.name;
     nameDiv.className = 'product-name';
+    var type = document.createElement('div');
+    type.innerText = element.type;
+    if(element.type == 'Organic'){
+        type.style.color = 'blue';
+        type.style.fontSize = '13px';
+    }
     var qtyDiv = document.createElement('div');
     qtyDiv.innerText = element.qty;
     qtyDiv.className = 'qty';
-    textDiv.append(priceDiv,nameDiv, qtyDiv);
+    textDiv.append(priceDiv,type,nameDiv, qtyDiv);
+    
 
 
     var addCart = document.createElement('div');
@@ -321,13 +417,25 @@ dataFruit.map((element, index) => {
     price.textContent = `$ ${element.price}`
     price.className = 'price';
     priceDiv.append(price);
+    var spn = document.createElement('span');
+    spn.innerText = element.priceTx;
+    spn.style.fontSize = '13px';
+    spn.style.marginLeft = '5px'
+    priceDiv.append(spn);
+    
     var nameDiv = document.createElement('div');
     nameDiv.innerText = element.name;
     nameDiv.className = 'product-name';
+    var type = document.createElement('div');
+    type.innerText = element.type;
+    if(element.type == 'Organic'){
+        type.style.color = 'blue';
+        type.style.fontSize = '13px';
+    }
     var qtyDiv = document.createElement('div');
     qtyDiv.innerText = element.qty;
     qtyDiv.className = 'qty';
-    textDiv.append(priceDiv,nameDiv, qtyDiv);
+    textDiv.append(priceDiv,type,nameDiv, qtyDiv);
 
 
     var addCart = document.createElement('div');
@@ -352,8 +460,31 @@ funRightBtn();
 funRightBtn1();
 
 function hvr(element, idx){
-    cartData.push(element);
-    cartItemCount.innerText = cartData.length;
+    if(cartData.length > 0){
+        var flag = false;
+        for(var i=0; i<cartData.length; i++){
+            if(cartData[i].index == idx){
+                cartData[i].count = cartData[i].count+1;
+                flag =false;
+                break;
+            }
+            else{
+                flag = true;
+            }
+        }
+        if(flag){
+            cartData.push({index:idx, elem:element, count:1});
+        }
+    }
+    else{
+        cartData.push({index:idx, elem:element, count:1});
+    }
+
+    // cartData.push(element);
+    var total = cartData.reduce((total, elem) => {
+        return total+elem.count;
+    },0)
+    cartItemCount.innerText = total;
     if(cartItemCount.innerText != '0'){
         cart.style.backgroundColor = 'rgb(10, 173, 10)';
         cart.style.color = 'white';
